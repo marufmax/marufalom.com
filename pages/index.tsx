@@ -22,9 +22,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.author} description={siteMetadata.description} />
-      <SectionContainer>
+      
         <Header />
-      </SectionContainer>
+      
       <Hero />
       <Intro />
       <HomeLayout>

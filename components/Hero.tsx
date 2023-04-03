@@ -24,7 +24,7 @@ export default function Hero(): ReactElement {
   }, [])
 
   return (
-    <div>
+    <div className='bg-black text-white'>
       <h1 className="sr-only">
         Hello I'm Maruf Alom, I'm a software developer, and I love building things for the web and mobile.
       </h1>

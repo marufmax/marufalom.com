@@ -7,9 +7,11 @@ import MobileNav from './MobileNav'
 
 export default function Header() {
   const router = useRouter()
+  const rootPageClass: string = "bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white";
+  const isRootPage = (): boolean => router.pathname === '/';
 
   return (
-    <header className="z-40 bg-transparent py-5 md:py-10">
+    <header className={`${isRootPage() ? rootPageClass : ''} z-40 bg-transparent py-5 md:py-10`}>
       <div className="mx-auto flex max-w-5xl items-center justify-between">
         <div>
           <Link href="/" className="flex items-center justify-between" aria-label="Home">
@@ -25,7 +27,7 @@ export default function Header() {
             </div>
           </Link>
         </div>
-        <div className="flex items-center space-x-3 text-base leading-5">
+        <div className={`flex items-center space-x-3 text-base leading-5`}>
           <div className="hidden space-x-5 sm:flex">
             {headerNavLinks.map(({ title, href }) => {
               const active = router.pathname.includes(href)
@@ -35,10 +37,11 @@ export default function Header() {
                   href={href}
                   className={classNames('horizontal-underline text-base', {
                     'horizontal-underline-active': active,
+                    
                   })}
                   aria-label={title}
                 >
-                  <span className="font-bold tracking-wide text-gray-900 dark:text-gray-100">
+                  <span className="font-bold tracking-wide ${isRootPage() ? 'text-white' : 'text-gray-900'} dark:text-gray-100">
                     {title}
                   </span>
                 </Link>
