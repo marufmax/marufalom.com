@@ -1,16 +1,20 @@
 ---
-path: "/configure-oracle-php-development-linux"
+canonicalUrl: "/configure-oracle-php-development-linux"
 date: "2018-05-06"
 title: "CONFIGURE ORACLE DATABASE IN PHP DEVELOPMENT ENVIRONMENT"
 tags: [development, php, oracle]
 draft: false
+summary: Setting up PHP for Oracle Database When working with Oracle databases for the first time, developers may find OCI8's complex procedures challenging. This blog post includes instructions for installing and configuring Oracle Instant Client and the OCI8 extension for PHP, as well as a step-by-step walkthrough for setting up PHP with OCI8. We also go over typical problems you can run into while configuring things and offer troubleshooting advice to help you fix them.
 ---
+Setting up PHP for Oracle Database When working with Oracle databases for the first time, developers may find OCI8's complex procedures challenging. This blog post includes instructions for installing and configuring Oracle Instant Client and the OCI8 extension for PHP, as well as a step-by-step walkthrough for setting up PHP with OCI8. We also go over typical problems you can run into while configuring things and offer troubleshooting advice to help you fix them. You will have a functional PHP-OCI8 environment at the end of this blog, which you can use to create robust and scalable web apps that take advantage of Oracle Database's features.
+
 Three things needed for connecting with oracle database with PHP.
 
+```
 - OCI8
 - PHP
 - Instant Client
-
+```
 
 
 Those three option should be the same version, same configuration with with each one. Suppose, if our machine has 64bit , then PHP, OCI and instant client should be the same 64Bit system.
@@ -18,7 +22,7 @@ Those three option should be the same version, same configuration with with each
 
 # Step 1: Download PHP 7.2
 
-<https://windows.php.net/downloads/releases/php-7.2.6-Win32-VC15-x64.zip>
+[Download PHP 7.2](https://windows.php.net/downloads/releases/php-7.2.6-Win32-VC15-x64.zip)
 
 
 
@@ -37,7 +41,7 @@ I explain what those words mean. First, TS mean it is thread safe. That mean, th
 
 # Step 2: Download Oracle Instant Client
 
-<http://www.oracle.com/technetwork/topics/winx64soft-089540.html>
+[Oracle Instant Client](http://www.oracle.com/technetwork/topics/winx64soft-089540.html)
 
 
 We need to download three packages from here.
@@ -63,7 +67,7 @@ Point the directory in that value too.
 
 # Step 3: Download the actual OCI8 package
 
-<https://pecl.php.net/package/oci8>
+[Download OCI8 PHP Package](https://pecl.php.net/package/oci8)
 
 You can download the latest version if you want . As we are using PHP version 7.2 select that version and Thread Safe respectably.
 

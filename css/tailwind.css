@@ -102,3 +102,17 @@ input:-webkit-autofill:focus {
 [cmdk-empty] {
   @apply flex items-center justify-center py-4 text-sm text-gray-500;
 }
+
+#table_of_contents {
+  @apply bg-[#f2f2f2] rounded-[calc(var(--padding)/4)] grid col-[page] grid-cols-[var(--column-gap)_[article-start_nav-start]_minmax(auto,calc((var(--aside-width)_*_3)_+_(var(--column-gap)_*_2)))_[nav-end]_var(--column-gap)_[margin-start]_var(--aside-width)_[article-end]_var(--column-gap)] mt-[calc(var(--padding)_*_2)] pt-[var(--padding)] pb-[var(--padding)] relative p-0;
+}
+
+.underline_link {
+  @apply bg-bottom bg-no-repeat bg-cover text-black pb-[0.05rem];
+  background-size: 100% 4px;
+  text-decoration: none;
+}
+
+.underline_link:hover {
+  @apply bg-[url('/static/site/underline.svg')] text-[#D70A1B];
+}

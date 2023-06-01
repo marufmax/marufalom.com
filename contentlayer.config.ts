@@ -27,7 +27,7 @@ export const Blog = defineDocumentType(() => ({
     draft: { type: 'boolean' },
     summary: { type: 'string' },
     images: { type: 'list', of: { type: 'string' } },
-    author: { type: 'string', required: true },
+    author: { type: 'string', required: false },
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
@@ -41,7 +41,7 @@ export const Authors = defineDocumentType(() => ({
   contentType: 'mdx',
   fields: {
     name: { type: 'string', required: true },
-    avatar: { type: 'string' },
+    companyLink: { type: 'string' },
     occupation: { type: 'string' },
     company: { type: 'string' },
     email: { type: 'string' },

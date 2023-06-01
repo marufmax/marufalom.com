@@ -42,18 +42,20 @@ const TOCInline = ({
   )
 
   const tocList = (
-    <ul>
-      {filteredToc.map((heading) => (
-        <li key={heading.value} className={`${heading.depth >= indentDepth && 'ml-6'}`}>
-          <a
-            href={heading.url}
-            className="not-prose border-b border-primary-400 no-underline dark:border-primary-500"
-          >
-            {heading.value}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <nav id='table_of_contents'>
+      <ul className="list-inside list-[square]">
+        {filteredToc.map((heading) => (
+          <li key={heading.value} className={`${heading.depth >= indentDepth ? 'ml-6 ' : ''}leading-6 hyphens-manual text-left mt-3 mb-2`}>
+            <a
+              href={heading.url}
+              className="underline_link"
+            >
+              {heading.value}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   )
 
   return (
