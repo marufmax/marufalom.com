@@ -33,11 +33,11 @@ export default function PostLayout({ content, authorDetails, children, next, pre
         {...content}
       />
       <article>
-        <header className="space-y-1 rounded-lg bg-primary-500 py-4 px-2 text-center sm:py-6 md:py-10">
+        <header className="space-y-1 rounded-lg py-4 px-2 text-center sm:py-6 md:py-10">
           <PageTitle>{title}</PageTitle>
           <dl>
             <dt className="sr-only">Published on</dt>
-            <dd className="flex flex-col justify-center text-base font-medium leading-6 text-white sm:flex-row sm:space-x-2">
+            <dd className="flex flex-col justify-center text-base font-medium leading-6 sm:flex-row sm:space-x-2">
               <div className="flex items-center justify-center space-x-2">
 
                 <time dateTime={date}>
