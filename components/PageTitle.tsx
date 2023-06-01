@@ -1,12 +1,10 @@
-import { ReactNode, useEffect, useState } from 'react'
-import { useRouter } from 'next/router';
+import { ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
 }
 
 export default function PageTitle({ children }: Props) {
-  const [isSticky, setIsSticky] = useState(false);
 
   return (
     <h1 className="underline-bg text-2xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">

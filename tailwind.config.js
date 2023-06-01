@@ -164,7 +164,7 @@ module.exports = {
               paddingTop: '2px',
               paddingBottom: '2px',
               borderRadius: '0.25rem',
-              fontSize: '1.2em'
+              fontSize: '1.1em'
             },
             'code:before': {
               content: 'none',

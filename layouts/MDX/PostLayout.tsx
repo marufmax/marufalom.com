@@ -7,6 +7,7 @@ import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Authors, Blog } from 'contentlayer/generated'
 import { ReactNode } from 'react'
 import formatDate from '@/lib/utils/formatDate'
+import { useState, useEffect } from 'react';
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -22,8 +23,22 @@ interface Props {
   prev?: { slug: string; title: string }
 }
 
+
 export default function PostLayout({ content, authorDetails, children, next, prev }: Props) {
   const { slug, date, title, author, readingTime } = content
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsSticky(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -33,7 +48,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
         {...content}
       />
       <article>
-        <header className="space-y-1 rounded-lg py-4 px-2 text-center sm:py-6 md:py-10">
+        <header className={`sticky text-center top-0 z-50 bg-white ${isSticky ? 'w-full p-1 text-sm' : ''}`}>
           <PageTitle>{title}</PageTitle>
           <dl>
             <dt className="sr-only">Published on</dt>
