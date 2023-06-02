@@ -5,8 +5,8 @@ import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import FadeDown from './Animations/FadeDown'
 import FadeRight from './Animations/FadeRight'
 import FadeUp from './Animations/FadeUp'
-import { renderCanvas } from './renderCanvas'
 import { ScrollContext } from './ScrollObserver'
+import SocialLinks from './socialIcons/SocialLinks'
 
 export default function Hero(): ReactElement {
   const ref = useRef<HTMLHeadingElement>(null)
@@ -18,10 +18,6 @@ export default function Hero(): ReactElement {
   if (elContainer) {
     progress = Math.min(1, scrollY / elContainer.clientHeight)
   }
-
-  useEffect(() => {
-    renderCanvas()
-  }, [])
 
   return (
     <div className='bg-black text-white'>
@@ -41,20 +37,28 @@ export default function Hero(): ReactElement {
               <div ref={ref} className="flex cursor-default flex-col space-y-2">
                 <FadeUp duration={0.6}>
                   <h1 className="text-5xl font-semibold sm:text-7xl md:text-8xl xl:text-9xl">
-                    Maruf Alom
+                    Hello There,
                   </h1>
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.2}>
-                  <h2 className="text-3xl font-medium opacity-80 sm:text-6xl md:text-6xl xl:text-7xl">
-                    Backend developer
+                  <h2 className="font-medium opacity-80 sm:text-1xl md:text-2xl xl:text-2xl">
+                    I am a passoniate developer with broad cross-domain expertise: API Development, Web, DevOps, automation. 
+                    I enjoy working with passionate people in a team to build products and solutions that help a large number of people.
                   </h2>
                 </FadeUp>
+                <FadeUp duration={0.6} delay={0.9}>
+                  <div className="pt-2=4 pb-4">
+                    Find me at: 
+                    <SocialLinks />
+                  </div>
+                </FadeUp>
+             
                 <FadeRight duration={0.5} delay={0.8}>
                   <Link
                     href="/about"
                     className="underline-magical text-md w-max cursor-pointer sm:text-lg md:text-xl xl:text-2xl"
                   >
-                    Read more about me &rarr;
+                    More about me &rarr;
                   </Link>
                 </FadeRight>
               </div>
