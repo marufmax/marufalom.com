@@ -120,7 +120,6 @@ module.exports = {
           800: '#930C4A',
           900: '#7A0747',
         },
-        'spotify-green': '#1DB954',
         green: colors.emerald,
         yellow: colors.amber,
         purple: colors.violet,
