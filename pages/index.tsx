@@ -19,11 +19,13 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.author} description={siteMetadata.description} />
-        <Header />
+      <Header />
       <Hero />
-      <HomeLayout>
-        <RecentPosts posts={posts} />
-      </HomeLayout>
+      <div className="h-screen w-full bg-gradient-to-r from-gray-100 to-gray-300">
+        <HomeLayout>
+          <RecentPosts posts={posts} />
+        </HomeLayout>
+      </div>
     </>
   )
 }
