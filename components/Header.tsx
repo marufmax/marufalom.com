@@ -7,8 +7,8 @@ import MobileNav from './MobileNav'
 
 export default function Header() {
   const router = useRouter()
-  const rootPageClass: string = "bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white";
-  const isRootPage = (): boolean => router.pathname === '/';
+  const rootPageClass = 'bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white'
+  const isRootPage = (): boolean => router.pathname === '/'
 
   return (
     <header className={`${isRootPage() ? rootPageClass : ''} z-40 bg-transparent py-5 md:py-10`}>
@@ -37,11 +37,10 @@ export default function Header() {
                   href={href}
                   className={classNames('horizontal-underline text-base', {
                     'horizontal-underline-active': active,
-                    
                   })}
                   aria-label={title}
                 >
-                  <span className="font-bold tracking-wide ${isRootPage() ? 'text-white' : 'text-gray-900'} dark:text-gray-100">
+                  <span className="${isRootPage() ? 'text-white' : 'text-gray-900'} font-bold tracking-wide dark:text-gray-100">
                     {title}
                   </span>
                 </Link>

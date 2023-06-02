@@ -18,11 +18,14 @@ export default function AuthorLayout({ children, content }: Props) {
           <div className="text-center sm:text-left">
             <h1 className="text-xl font-bold md:text-3xl lg:text-4xl">Maruf Alom</h1>
             <h2 className="text-sm font-normal md:text-base">
-              {occupation} <span className="font-semibold"><a href={companyLink}> {company} </a></span>
+              {occupation}{' '}
+              <span className="font-semibold">
+                <a href={companyLink}> {company} </a>
+              </span>
             </h2>
           </div>
         </div>
-        <div className="prose max-w-none pb-8 text-justify text-sm dark:prose-dark md:text-lg xl:col-span-2">
+        <div className="dark:prose-dark prose max-w-none pb-8 text-justify text-sm md:text-lg xl:col-span-2">
           {children}
         </div>
       </div>

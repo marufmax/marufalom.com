@@ -20,9 +20,10 @@ export default function Hero(): ReactElement {
   }
 
   return (
-    <div className='bg-black text-white'>
+    <div className="bg-black text-white">
       <h1 className="sr-only">
-        Hello I'm Maruf Alom, I'm a software developer, and I love building things for the web and mobile.
+        Hello I'm Maruf Alom, I'm a software developer, and I love building things for the web and
+        mobile.
       </h1>
       <motion.div
         className="relative z-10 flex h-[calc(100vh-81px)] items-center md:h-[calc(100vh-116px)]"
@@ -41,18 +42,19 @@ export default function Hero(): ReactElement {
                   </h1>
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.2}>
-                  <h2 className="font-medium opacity-80 sm:text-1xl md:text-2xl xl:text-2xl">
-                    I am a passoniate developer with broad cross-domain expertise: API Development, Web, DevOps, automation. 
-                    I enjoy working with passionate people in a team to build products and solutions that help a large number of people.
+                  <h2 className="sm:text-1xl font-medium opacity-80 md:text-2xl xl:text-2xl">
+                    I am a passoniate developer with broad cross-domain expertise: API Development,
+                    Web, DevOps, automation. I enjoy working with passionate people in a team to
+                    build products and solutions that help a large number of people.
                   </h2>
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.9}>
                   <div className="pt-2=4 pb-4">
-                    Find me at: 
+                    Find me at:
                     <SocialLinks />
                   </div>
                 </FadeUp>
-             
+
                 <FadeRight duration={0.5} delay={0.8}>
                   <Link
                     href="/about"
