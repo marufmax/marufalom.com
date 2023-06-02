@@ -21,30 +21,31 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: index / 10 }}
         >
-          <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
-            <article className="cursor-pointer gap-3 space-y-2 bg-opacity-20 py-5 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-              <div className="space-y-4 xl:col-span-4">
-                <span className="text-4xl font-bold hover:bg-gray-200 rounded-lg leading-11 tracking-tight">
-                  <Link href={`/blog/${slug}`}>
-                    <span className="text-primary-950 duration-300 uppercase hover:text-persian-plum-500">
-                      {title}
-                    </span>
-                  </Link>
+          <article className="cursor-pointer gap-3 space-y-2 bg-opacity-20 py-5 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+            <div className="space-y-4 xl:col-span-4">
+              <span className="rounded-lg text-4xl font-bold leading-11 tracking-tight hover:bg-gray-200">
+                <Link href={`/blog/${slug}`}>
+                  <span className="uppercase text-primary-950 duration-300 hover:text-persian-plum-500">
+                    {title}
+                  </span>
+                </Link>
+              </span>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-primary-500">
+                  {' '}
+                  {formatDate(date)} — {readingTime.text}{' '}
                 </span>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-primary-500"> { formatDate(date)  } — { readingTime.text} </span>
-                </div>
-                {showTags && tags && (
-                  <div className="flex flex-wrap gap-3">
-                    {tags.map((tag) => (
-                      <Tag key={tag} text={tag} />
-                    ))}
-                  </div>
-                )}
-                <div className="prose max-w-none text-gray-900 dark:text-gray-100">{summary}</div>
               </div>
-            </article>
-          </Link>
+              {showTags && tags && (
+                <div className="flex flex-wrap gap-3">
+                  {tags.map((tag) => (
+                    <Tag key={tag} text={tag} />
+                  ))}
+                </div>
+              )}
+              <div className="prose max-w-none text-gray-900 dark:text-gray-100">{summary}</div>
+            </div>
+          </article>
         </motion.li>
       ))}
     </ul>
