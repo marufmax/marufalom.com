@@ -42,7 +42,7 @@
     "swr": "2.0.0"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "4.29",
+    "@netlify/plugin-nextjs": "4.37",
     "@next/bundle-analyzer": "13.1.1",
     "@svgr/webpack": "6.5.1",
     "@tailwindcss/forms": "0.5.3",
