@@ -4,3 +4,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/_next/image/*"
+
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
