@@ -10,7 +10,7 @@ const ContentSecurityPolicy = `
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app https://cdn.logrocket.io https://cdn.lr-ingest.io https://cdn.lr-in.com https://cdn.lr-in-prod.com https://*.vercel-insights.com https://*.vercel-scripts.com;
   child-src 'self' blob:; 
   worker-src 'self' blob:; 
-  style-src 'self' 'unsafe-inline' https://*.cloudfront.net;
+  style-src 'self' 'unsafe-inline' https://giscus.app;
   img-src * blob: data:;
   media-src 'none';
   connect-src * https://*.logrocket.io https://*.lr-ingest.io https://*.logrocket.com https://*.lr-in.com https://*.lr-in-prod.com;

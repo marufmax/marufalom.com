@@ -42,7 +42,9 @@ export default function PostLayout({ content, authorDetails, children, next, pre
       />
       <article>
         <header
-          className={` top-0 z-50 bg-white text-center ${isSticky ? 'w-full p-3 text-sm' : ''}`}
+          className={`sticky top-0 z-50 bg-white text-center ${
+            isSticky ? 'w-full p-3 text-sm' : ''
+          }`}
         >
           <PageTitle>{title}</PageTitle>
           <dl>
