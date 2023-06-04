@@ -19,6 +19,7 @@ interface CommonSEOProps {
 
 const CommonSEO = ({ title, description, ogType, ogImage, twImage }: CommonSEOProps) => {
   const router = useRouter()
+
   return (
     <Head>
       <title>{title}</title>
