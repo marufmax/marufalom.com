@@ -4,7 +4,6 @@ import '@fontsource/mukta'
 
 import LogRocket from '@/components/Logrocket'
 import ProgressBar from '@/components/ProgressBar'
-import { ScrollObserver } from '@/components/ScrollObserver'
 import siteMetadata from '@/data/siteMetadata'
 import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
@@ -19,12 +18,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <AnimatePresence exitBeforeEnter initial={false}>
-        <ScrollObserver>
-          <LogRocket />
-          <ProgressBar />
-          <Component {...pageProps} />
-          <Analytics />
-        </ScrollObserver>
+        <LogRocket />
+        <ProgressBar />
+        <Component {...pageProps} />
+        <Analytics />
       </AnimatePresence>
     </ThemeProvider>
   )

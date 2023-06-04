@@ -9,12 +9,6 @@ import { ReactNode } from 'react'
 import formatDate from '@/lib/utils/formatDate'
 import { useState, useEffect } from 'react'
 
-const postDateTemplate: Intl.DateTimeFormatOptions = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-}
-
 interface Props {
   content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>
@@ -48,18 +42,16 @@ export default function PostLayout({ content, authorDetails, children, next, pre
       />
       <article>
         <header
-          className={`sticky top-0 z-50 bg-white text-center ${
-            isSticky ? 'w-full p-1 text-sm' : ''
-          }`}
+          className={` top-0 z-50 bg-white text-center ${isSticky ? 'w-full p-3 text-sm' : ''}`}
         >
           <PageTitle>{title}</PageTitle>
           <dl>
             <dt className="sr-only">Published on</dt>
-            <dd className="flex flex-col justify-center text-base font-medium leading-6 sm:flex-row sm:space-x-2">
+            <dd className="flex flex-row justify-center text-base font-medium leading-6 sm:flex-row sm:space-x-2">
               <div className="flex items-center justify-center space-x-2">
                 <time dateTime={date}>{formatDate(date)}</time>
               </div>
-              <span className="hidden sm:block">-</span>
+              <span className="mx-1 sm:block">-</span>
               <span>{readingTime.text}</span>
             </dd>
           </dl>
