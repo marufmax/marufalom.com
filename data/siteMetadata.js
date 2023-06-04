@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/marufmax/marufalom.com',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.webp',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/grain-gradient.webp',
   email: 'hi@marufalom.com',
   github: 'https://github.com/marufmax',
   twitter: 'https://twitter.com/nothingsecurity',
