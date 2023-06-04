@@ -8,6 +8,7 @@ import { ScrollObserver } from '@/components/ScrollObserver'
 import siteMetadata from '@/data/siteMetadata'
 import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
+import { Analytics } from '@vercel/analytics/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <LogRocket />
           <ProgressBar />
           <Component {...pageProps} />
+          <Analytics />
         </ScrollObserver>
       </AnimatePresence>
     </ThemeProvider>
