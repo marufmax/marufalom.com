@@ -88,6 +88,7 @@ module.exports = withContentlayer(
 // Injected content via Sentry wizard below
 
 const { withSentryConfig } = require('@sentry/nextjs')
+const { redirect } = require('next/dist/server/api-utils')
 
 module.exports = withSentryConfig(
   module.exports,
@@ -121,3 +122,45 @@ module.exports = withSentryConfig(
     disableLogger: true,
   }
 )
+
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/linux-shell-scripting-bangla-part-1',
+        destination: '/blog/linux-shell-scripting-part-1',
+        permanent: true,
+      },
+      {
+        source: '/linux-shell-scripting-bangla-part-2',
+        destination: '/blog/linux-shell-scripting-part-2',
+        permanent: true,
+      },
+      {
+        source: '/php-and-js-code-refactoring',
+        destination: '/blog/php-and-js-code-refactoring',
+        permanent: true,
+      },
+      {
+        source: '/simple-explaination-laravel-routing',
+        destination: '/blog/simple-explaination-laravel-routing',
+        permanent: true,
+      },
+      {
+        source: '/docker-for-busy-developers',
+        destination: '/blog/docker-for-busy-developers',
+        permanent: true,
+      },
+      {
+        source: '/optimize-wordpress-site-and-score-100-in-page-speed',
+        destination: '/blog/Optimize-wordpress-site-and-score-100-in-page-speed',
+        permanent: true,
+      },
+      {
+        source: '/shout',
+        destination: '/about',
+        permanent: true,
+      },
+    ]
+  },
+}
