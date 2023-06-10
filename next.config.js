@@ -4,6 +4,44 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+const redirects = [
+  {
+    source: '/linux-shell-scripting-bangla-part-1',
+    destination: '/blog/linux-shell-scripting-part-1',
+    permanent: true,
+  },
+  {
+    source: '/linux-shell-scripting-bangla-part-2',
+    destination: '/blog/linux-shell-scripting-part-2',
+    permanent: true,
+  },
+  {
+    source: '/php-and-js-code-refactoring',
+    destination: '/blog/php-and-js-code-refactoring',
+    permanent: true,
+  },
+  {
+    source: '/simple-explaination-laravel-routing',
+    destination: '/blog/simple-explaination-laravel-routing',
+    permanent: true,
+  },
+  {
+    source: '/docker-for-busy-developers',
+    destination: '/blog/docker-for-busy-developers',
+    permanent: true,
+  },
+  {
+    source: '/optimize-wordpress-site-and-score-100-in-page-speed',
+    destination: '/blog/Optimize-wordpress-site-and-score-100-in-page-speed',
+    permanent: true,
+  },
+  {
+    source: '/shout',
+    destination: '/about',
+    permanent: true,
+  },
+]
+
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -74,6 +112,10 @@ module.exports = withContentlayer(
         },
       ]
     },
+
+    async redirects() {
+      return redirects
+    },
     webpack: (config) => {
       config.module.rules.push({
         test: /\.svg$/,
@@ -121,45 +163,3 @@ module.exports = withSentryConfig(
     disableLogger: true,
   }
 )
-
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/linux-shell-scripting-bangla-part-1',
-        destination: '/blog/linux-shell-scripting-part-1',
-        permanent: true,
-      },
-      {
-        source: '/linux-shell-scripting-bangla-part-2',
-        destination: '/blog/linux-shell-scripting-part-2',
-        permanent: true,
-      },
-      {
-        source: '/php-and-js-code-refactoring',
-        destination: '/blog/php-and-js-code-refactoring',
-        permanent: true,
-      },
-      {
-        source: '/simple-explaination-laravel-routing',
-        destination: '/blog/simple-explaination-laravel-routing',
-        permanent: true,
-      },
-      {
-        source: '/docker-for-busy-developers',
-        destination: '/blog/docker-for-busy-developers',
-        permanent: true,
-      },
-      {
-        source: '/optimize-wordpress-site-and-score-100-in-page-speed',
-        destination: '/blog/Optimize-wordpress-site-and-score-100-in-page-speed',
-        permanent: true,
-      },
-      {
-        source: '/shout',
-        destination: '/about',
-        permanent: true,
-      },
-    ]
-  },
-}
