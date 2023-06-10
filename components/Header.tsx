@@ -2,7 +2,6 @@ import headerNavLinks from '@/data/headerNavLinks'
 import classNames from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import CommandPalette from './CommandPalette/CommandPalette'
 import MobileNav from './MobileNav'
 
 export default function Header() {
@@ -48,7 +47,6 @@ export default function Header() {
             })}
           </div>
           <div className="flex items-center">
-            <CommandPalette />
             <MobileNav />
           </div>
         </div>
