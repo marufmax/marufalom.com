@@ -447,7 +447,7 @@ trait Hello {
 
 আমরা ট্রেইট ডিক্লেয়ার করে ফেললাম। এবার ট্রেইট অনুযায়ী ফাংশন ডিক্লেয়ার করবো struct এরঃ
 
-```
+```rust
 impl Hello for Person {
 	fn say_hello(&self) {
 		println("Hello, {}", self.name)
@@ -482,7 +482,7 @@ macro_rules! say_hello {
 
 এবার যদি আমাদের `say_hello` ম্যাক্রো কল করতে চাই তাহলেঃ
 
-```
+```rust
 fn main() {
     say_hello!();
 }
