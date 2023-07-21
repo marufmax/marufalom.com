@@ -13,7 +13,7 @@ const siteMetadata = {
   email: 'hi@marufalom.com',
   github: 'https://github.com/marufmax',
   twitter: 'https://twitter.com/nothingsecurity',
-  linkedin: 'https://www.linkedin.com/in/marufalom/',
+  linkedin: 'https://www.linkedin.com/in/marufalom',
   locale: 'en-US',
   comment: {
     provider: 'giscus',

@@ -22,7 +22,7 @@ export default function Header() {
                 }
               )}
             >
-              maruf
+              Home
             </div>
           </Link>
         </div>
