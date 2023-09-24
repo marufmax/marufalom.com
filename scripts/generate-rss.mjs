@@ -36,7 +36,7 @@ const generateRssItem = (post) => `
   </item>
 `
 
-const generateRss = (posts, page = 'feed.xml') => `
+const generateXMLString = (posts, page = 'feed.xml') => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>${escape(siteMetadata.title)}</title>
@@ -52,10 +52,22 @@ const generateRss = (posts, page = 'feed.xml') => `
   </rss>
 `
 
+function dateSortDesc(a, b) {
+  if (a > b) return -1
+  if (a < b) return 1
+  return 0
+}
+
+function sortedBlogPost(allBlogs) {
+  return allBlogs
+    .sort((a, b) => dateSortDesc(a.date, b.date))
+    .filter((p) => p.draft === false);
+}
+
 async function generate() {
   // RSS for blog post
   if (allBlogs.length > 0) {
-    const rss = generateRss(allBlogs)
+    const rss = generateXMLString(sortedBlogPost(allBlogs))
     writeFileSync('./public/feed.xml', rss)
   }
 
@@ -67,7 +79,7 @@ async function generate() {
       const filteredPosts = allBlogs.filter(
         (post) => post.draft !== true && post.tags.map((t) => GithubSlugger.slug(t)).includes(tag)
       )
-      const rss = generateRss(filteredPosts, `tags/${tag}/feed.xml`)
+      const rss = generateXMLString(filteredPosts, `tags/${tag}/feed.xml`)
       const rssPath = path.join('public', 'tags', tag)
       mkdirSync(rssPath, { recursive: true })
       writeFileSync(path.join(rssPath, 'feed.xml'), rss)
