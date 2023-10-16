@@ -52,7 +52,7 @@ const ContentSecurityPolicy = `
   img-src * blob: data:;
   media-src 'none';
   connect-src * https://*.logrocket.io https://*.lr-ingest.io https://*.logrocket.com https://*.lr-in.com https://*.lr-in-prod.com;
-  font-src 'self';
+  font-src 'self' data: https://fonts.googleapis.com;
   frame-src giscus.app
 `
 
