@@ -8,7 +8,6 @@ const MobileNav = () => {
   const router = useRouter()
   const [navShow, setNavShow] = useState(false)
   const isRootPage = (): boolean => router.pathname === '/'
-  console.log(isRootPage())
 
   useEffect(() => {
     if (navShow) {
