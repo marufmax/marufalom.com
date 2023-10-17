@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
 import SectionContainer from '../components/SectionContainer'
+import GeneralHeader from '@/components/Header/GeneralHeader'
 
 interface Props {
   children: ReactNode
@@ -17,7 +17,7 @@ export default function MainLayout({ children }: Props) {
 
   return (
     <SectionContainer>
-      <Header />
+      <GeneralHeader />
       <div className="flex h-screen flex-col justify-between">
         <motion.main
           className="mb-auto"
