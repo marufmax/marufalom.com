@@ -28,7 +28,7 @@ module.exports = {
         '8.5xl': '7rem',
       },
       fontFamily: {
-        sans: ['Mukta', ...defaultTheme.fontFamily.sans],
+        sans: ['Baloo Da 2 Variable', ...defaultTheme.fontFamily.sans],
       },
       gradientColorStops: {
         'gradient-1-start': '#F20089',

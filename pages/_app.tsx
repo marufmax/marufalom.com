@@ -1,6 +1,6 @@
 import '@/css/prism.css'
 import '@/css/tailwind.css'
-import '@fontsource/mukta'
+import '@fontsource-variable/baloo-da-2'
 
 import LogRocket from '@/components/Logrocket'
 import ProgressBar from '@/components/ProgressBar'
