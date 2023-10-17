@@ -125,8 +125,8 @@ module.exports = withContentlayer(
       return config
     },
     i18n: {
-      locales: ['en-US', 'bn'],
-      defaultLocale: 'en-US',
+      locales: ['en'],
+      defaultLocale: 'en',
     },
   })
 )
