@@ -1,16 +1,14 @@
 import headerNavLinks from '@/data/headerNavLinks'
 import classNames from 'classnames'
 import Link from 'next/link'
+import MobileNav from './../MobileNav'
 import { useRouter } from 'next/router'
-import MobileNav from './MobileNav'
 
-export default function Header() {
+export default function GeneralHeader() {
   const router = useRouter()
-  const rootPageClass = 'bg-ondhokar-950 text-white'
-  const isRootPage = (): boolean => router.pathname === '/'
 
   return (
-    <header className={`${isRootPage() ? rootPageClass : ''} z-40 py-5 md:py-10`}>
+    <header className="z-40 py-5 md:py-10">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
         <div>
           <Link href="/" className="flex items-center justify-between" aria-label="Home">

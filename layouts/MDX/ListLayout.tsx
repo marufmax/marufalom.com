@@ -26,7 +26,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     <>
       <div className="">
         <div className="space-y-2 rounded-lg pt-8 pb-3 md:space-y-5">
-          <h1 className=" font-extrabold uppercase leading-9 tracking-2 text-persian-plum-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-3xl md:leading-12">
+          <h1 className="font-extrabold uppercase leading-9 tracking-2 text-persian-plum-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-3xl md:leading-12">
             {title}
           </h1>
         </div>
