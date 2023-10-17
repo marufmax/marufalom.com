@@ -21,7 +21,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <PageSEO title={siteMetadata.author} description={siteMetadata.description} />
       <HomepageHeader />
       <Hero />
-      <div className="h-screen w-full bg-gradient-to-r from-gray-100 to-gray-300">
+      <div className="min-h-screen w-full bg-gradient-to-r from-gray-100 to-gray-300">
         <HomeLayout>
           <RecentPosts posts={posts} />
         </HomeLayout>
