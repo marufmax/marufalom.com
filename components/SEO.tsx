@@ -3,6 +3,7 @@ import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Authors, Blog } from 'contentlayer/generated'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Metrics from '../scripts/metrics'
 
 interface CommonSEOProps {
   title: string
@@ -16,7 +17,6 @@ interface CommonSEOProps {
       }[]
   twImage: string
 }
-
 const CommonSEO = ({ title, description, ogType, ogImage, twImage }: CommonSEOProps) => {
   const router = useRouter()
 
@@ -40,6 +40,8 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }: CommonSEOPr
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twImage} />
+
+      <Metrics />
     </Head>
   )
 }
