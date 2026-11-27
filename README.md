@@ -43,5 +43,5 @@ yarn dev
 The resume page is `public/resume.html`. After editing it, regenerate the PDF:
 
 ```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --no-pdf-header-footer --print-to-pdf=public/static/Maruf-Alom-Resume.pdf "file://$PWD/public/resume.html"
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf=public/static/Maruf-Alom-Resume.pdf "file://$PWD/public/resume.html"
 ```
