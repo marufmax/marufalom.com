@@ -1,11 +1,7 @@
-# marufalom.com ⚡️
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a7ab52ee-cb7b-4a72-997d-bfc121adcd5b/deploy-status)](https://app.netlify.com/sites/marufalom/deploys)
+# maruf.blog ⚡️
 
 - **Framework**: [Next.js](https://nextjs.org/)
-- **Deployment**: [Vercel](https://netlify.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Analytics**: [Logrocket](https://logrocket.com/)
 - **Content**: [MDX](https://mdxjs.com/) with [Contentlayer](https://www.contentlayer.dev/)
 
 ## Running Locally
@@ -42,3 +38,10 @@ cp .env.example .env.local
 yarn dev
 ```
 
+## Resume
+
+The resume page is `public/resume.html`. After editing it, regenerate the PDF:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf=public/static/Maruf-Alom-Resume.pdf "file://$PWD/public/resume.html"
+```
