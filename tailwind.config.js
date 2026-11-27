@@ -28,7 +28,10 @@ module.exports = {
         '8.5xl': '7rem',
       },
       fontFamily: {
-        sans: ['Baloo Da 2 Variable', ...defaultTheme.fontFamily.sans],
+        // Baloo Da 2 covers Bangla. A family name with a digit must be quoted,
+        // or the browser drops the whole declaration.
+        sans: ['Geist', '"Baloo Da 2 Variable"', ...defaultTheme.fontFamily.sans],
+        mono: ['"Geist Mono"', ...defaultTheme.fontFamily.mono],
       },
       gradientColorStops: {
         'gradient-1-start': '#F20089',

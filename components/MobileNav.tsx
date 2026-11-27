@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react'
 const MobileNav = () => {
   const router = useRouter()
   const [navShow, setNavShow] = useState(false)
-  const isRootPage = (): boolean => router.pathname === '/'
 
   useEffect(() => {
     if (navShow) {
@@ -30,7 +29,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className={`${isRootPage() ? 'text-gray-100' : 'text-gray-900'}`}
+          className="text-gray-900 dark:text-gray-100"
         >
           <path
             fillRule="evenodd"
@@ -55,7 +54,7 @@ const MobileNav = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="text-gray-900"
+              className="text-gray-900 dark:text-gray-100"
             >
               <path
                 fillRule="evenodd"

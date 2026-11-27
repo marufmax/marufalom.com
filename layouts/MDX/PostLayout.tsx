@@ -42,7 +42,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
       />
       <article>
         <header
-          className={`sticky top-0 z-50 bg-white text-center ${
+          className={`sticky top-0 z-50 bg-white text-center dark:bg-neutral-900 ${
             isSticky ? 'w-full p-3 text-sm' : ''
           }`}
         >
@@ -63,7 +63,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
           style={{ gridTemplateRows: 'auto 1fr' }}
         >
           <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-4 xl:row-span-2 xl:pb-0">
-            <div className="dark:prose-dark prose max-w-none pt-8 pb-8">
+            <div className="prose max-w-none pt-8 pb-8 dark:prose-invert">
               {children}
               <PostNavigation prev={prev} next={next} />
               <PostComments />
