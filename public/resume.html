@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume - Maruf Alom</title>
+<meta name="description" content="Maruf Alom, Senior Backend Engineer. AI automation and agents.">
+<link rel="canonical" href="https://maruf.blog/resume">
+<link rel="icon" href="/static/favicons/favicon.ico">
+<!-- The PDF is printed from this page; regenerate it after editing (see README). -->
+<style>
+  @page { size: letter; margin: 0.4in; }
+  body { margin: 0 auto; max-width: 8.1in; padding: 16px; background: #fff; color: #000;
+         font: 13px/1.4 "Latin Modern Roman", "Computer Modern", Georgia, "Times New Roman", serif; }
+  a { color: inherit; }
+  header { text-align: center; margin-bottom: 18px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  header p { margin: 3px 0; }
+  .columns { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+  h2 { font-size: 16px; border-bottom: 1px solid #000; padding-bottom: 4px; margin: 12px 0 5px; }
+  main h2, aside h2:first-child { margin-top: 0; }
+  h3 { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; margin: 8px 0 0; }
+  p { margin: 0; }
+  ul { margin: 3px 0 0; padding-left: 16px; }
+  dt { font-weight: bold; margin-top: 4px; }
+  dd { margin: 0; }
+  nav { display: flex; justify-content: space-between; margin-bottom: 12px; }
+  @media (max-width: 640px) { .columns { grid-template-columns: 1fr; } h3 { flex-wrap: wrap; } }
+  @media print {
+    body { max-width: none; padding: 0; font-size: 11.5px; line-height: 1.35; }
+    .columns { grid-template-columns: 2fr 1fr; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+<nav><a href="/">&larr; maruf.blog</a><a href="/static/Maruf-Alom-Resume.pdf">Download PDF</a></nav>
+<header>
+  <h1>Maruf Alom</h1>
+  <p>Senior Backend Engineer | AI Automation and Agents</p>
+  <p>Dhaka, Bangladesh | <a href="mailto:talk.maruf@gmail.com">talk.maruf@gmail.com</a> |
+     <a href="https://maruf.blog">maruf.blog</a> | <a href="https://github.com/marufmax">GitHub</a> |
+     <a href="https://linkedin.com/in/marufalom">LinkedIn</a></p>
+</header>
+<div class="columns">
+<main>
+  <h2>Professional Experience</h2>
+
+  <h3><span>Full-stack Developer</span><span>Jan 2026 – Nov 2026</span></h3>
+  <p><a href="https://www.beycome.com"><em>Beycome</em></a> | US real estate platform</p>
+  <ul>
+    <li>Built the MLS automation bot that makes listing changes (open house, price, remarks, photos, status) directly on MLS boards. Wrote recipes for 132 MLS boards in under 5 months, saving about 813 hours of manual work per week.</li>
+    <li>Added AI self-healing to the bot and built Buddhi, an AI agent that investigates and fixes failed MLS change tickets and learns from past fixes.</li>
+    <li>Built the API side that controls the bot: which MLS board gets which change, credential locking, and one tech ticket per failure.</li>
+    <li>Built audit and auto-fix for ShowingTime and BrokerBay on every listing, plus showings sync.</li>
+    <li>Designed a star-schema warehouse for 14 GB of Redfin market data that powers the public Market Trends page, and moved it from MySQL to Postgres.</li>
+    <li>Rebuilt the legacy PHP back office in Laravel Filament following PSR and Laravel coding standards, and moved old cron, feed and scraper jobs into queues and the scheduler.</li>
+  </ul>
+
+  <h3><span>Backend Engineer</span><span>Oct 2022 – Jan 2025</span></h3>
+  <p><a href="https://www.paysera.com"><em>Paysera</em></a> | Fintech, onboarding team</p>
+  <ul>
+    <li>Designed a points-based risk-scoring model for onboarding (KYC, fraud, bots) that cut fraudulent activity by about 20%.</li>
+    <li>Built device confirmation and rejection flows for the support panel and mobile apps.</li>
+    <li>Scaled RabbitMQ queue consumers for KYC document processing during onboarding.</li>
+    <li>Deployed services on Kubernetes with Rancher and monitored them with Grafana.</li>
+    <li>Reviewed code for the team on a regular basis.</li>
+  </ul>
+
+  <h3><span>Software Engineer</span><span>Feb 2020 – Oct 2022</span></h3>
+  <p><a href="https://portonics.com"><em>Portonics</em></a> | Telecom and enterprise software</p>
+  <ul>
+    <li>Led the team maintaining Telenor’s B2B API: 20M+ requests a day at 99% uptime.</li>
+    <li>Built OCR-based SIM registration microservices handling 65K+ registrations a day.</li>
+    <li>Built a back-office tool that cut support response time by about 30%.</li>
+    <li>Set up Redis Sentinel and Cluster caching, and open-sourced part of our PHPRedis Sentinel wrapper.</li>
+  </ul>
+
+  <h3><span>Senior Web Developer / Software Developer</span><span>Apr 2018 – Feb 2020</span></h3>
+  <p><em><a href="https://energaia.com">EnerGaia</a>, <a href="https://www.bdg.com.bd">BDG-Magura Group</a></em></p>
+  <ul>
+    <li>Built a SaaS platform for Spirulina farmers in 7 Asian countries, with CI/CD on CircleCI.</li>
+    <li>Built an ERP for apparel factories covering merchandising, production and inventory (Laravel, Vue.js).</li>
+  </ul>
+
+  <h3><span>Penetration Tester</span><span>Aug 2014 – Dec 2015</span></h3>
+  <p><em>SECUPENT</em> | Security consultancy</p>
+  <ul>
+    <li>Ran vulnerability assessments on client websites and web apps, by hand and with scanning tools.</li>
+    <li>Wrote proof-of-concept exploits for the issues I found and reported them to clients.</li>
+    <li>Published WordPress file-upload vulnerabilities that allowed remote shell upload:
+      <ul>
+        <li>Valums Uploader (<a href="https://www.vulnerability-lab.com/get_content.php?id=817">Vulnerability-Lab VL-817</a>)</li>
+        <li>Magn WP Drag &amp; Drop Media Uploader 1.1.4 (<a href="https://wpscan.com/vulnerability/f4874745-0c16-4407-817c-5e0df4962c8b">WPScan</a>)</li>
+        <li>WPScientist themes, arbitrary file upload</li>
+      </ul>
+    </li>
+  </ul>
+</main>
+<aside>
+  <h2>Profile</h2>
+  <p>Backend engineer with 11+ years in PHP and Go. Most of my recent work is automating manual operations work, lately with AI agents. I prefer simple solutions that ship over clever ones.</p>
+  <h2>Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>PHP 8, Go, JavaScript</dd>
+    <dt>Frameworks</dt><dd>Laravel (Filament), Symfony, Vue.js, Svelte, Node.js</dd>
+    <dt>AI and Automation</dt><dd>AI agents, MCP, browser automation, ETL pipelines</dd>
+    <dt>Data</dt><dd>PostgreSQL, MySQL, Redis, Elasticsearch, RabbitMQ</dd>
+    <dt>Infrastructure</dt><dd>Docker, Kubernetes, Rancher, Grafana, CI/CD, Ansible</dd>
+    <dt>Product</dt><dd>Product ownership, roadmap planning, system design</dd>
+  </dl>
+  <h2>Education</h2>
+  <p><strong>B.Sc. Computer Science and Engineering</strong></p>
+  <p>World University of Bangladesh, 2018</p>
+  <h2>Certifications</h2>
+  <p>Certified Scrum Developer (CSD), Scrum Alliance, 2023</p>
+  <p>Software Design and Architecture, BASIS, 2022</p>
+  <h2>Languages</h2>
+  <p>Bengali (native)</p>
+  <p>English (professional working proficiency)</p>
+  <h2>Community</h2>
+  <ul>
+    <li>Moderator of Bangladesh’s largest Laravel group (58,000+ members).</li>
+    <li>Organize Laravel community meetups.</li>
+  </ul>
+</aside>
+</div>
+</body>
+</html>

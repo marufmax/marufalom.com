@@ -23,7 +23,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     title: 'Send email',
-    link: 'mailto:mail@marufalom.com',
+    link: 'mailto:talk.maruf@gmail.com',
     hoverClass: 'hover:text-green-200',
     icon: <AiOutlineMail size={42} />,
   },
