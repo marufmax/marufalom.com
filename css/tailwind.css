@@ -120,3 +120,30 @@ input:-webkit-autofill:focus {
 .underline-link:hover {
   @apply bg-[url('/static/site/underline.svg')] text-[#D70A1B];
 }
+
+/* Dark mode: tailwind.config.js gives .prose fixed light colours, so override them here. */
+.dark .prose,
+.dark .prose :is(h1, h2, h3, h4, h5, h6, strong, blockquote, th) {
+  @apply text-neutral-200;
+}
+
+.dark .prose a {
+  @apply text-primary-300;
+}
+
+.dark .prose :not(pre) > code {
+  @apply bg-neutral-800 text-red-300;
+}
+
+.dark .prose :is(hr, blockquote, th, td, tr, thead) {
+  @apply border-neutral-700;
+}
+
+.dark #table_of_contents {
+  @apply bg-neutral-800;
+}
+
+/* The title underline is a black drawing. */
+.dark .underline-bg {
+  background-image: none;
+}

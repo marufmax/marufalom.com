@@ -23,9 +23,9 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
         >
           <article className="cursor-pointer gap-3 space-y-2 bg-opacity-20 py-5 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
             <div className="space-y-4 xl:col-span-4">
-              <span className="rounded-lg text-4xl font-bold leading-11 tracking-tight hover:bg-gray-200">
+              <span className="rounded-lg text-4xl font-bold leading-11 tracking-tight hover:bg-gray-200 dark:hover:bg-neutral-800">
                 <Link href={`/blog/${slug}`}>
-                  <span className="uppercase text-primary-950 duration-300 hover:text-persian-plum-500">
+                  <span className="uppercase text-primary-950 duration-300 hover:text-persian-plum-500 dark:text-gray-100 dark:hover:text-persian-plum-400">
                     {title}
                   </span>
                 </Link>
@@ -43,7 +43,9 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
                   ))}
                 </div>
               )}
-              <div className="prose max-w-none text-gray-900 dark:text-gray-100">{summary}</div>
+              <div className="prose max-w-none text-gray-900 dark:text-gray-100 dark:prose-invert">
+                {summary}
+              </div>
             </div>
           </article>
         </motion.li>

@@ -2,9 +2,10 @@ const siteMetadata = {
   title: 'Maruf Alom',
   author: 'Maruf Alom',
   headerTitle: 'maruf.blog',
-  description: 'Backend Developer',
+  description:
+    'Backend engineer in Dhaka. PHP, Go, AI agents and automation. Building Zardo and HypeBox.',
   language: 'en-us',
-  theme: 'light', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://maruf.blog',
   siteRepo: 'https://github.com/marufmax/marufalom.com',
   siteLogo: '/static/images/logo.png',

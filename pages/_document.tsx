@@ -11,8 +11,13 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap"
+          />
         </Head>
-        <body className="bg-white text-black antialiased dark:bg-black dark:text-white">
+        <body className="bg-white text-black antialiased dark:bg-neutral-900 dark:text-neutral-100">
           <Main />
           <NextScript />
         </body>
